@@ -1,0 +1,31 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+background-image:url("/images/fondo");
+}
+
+h1 {
+    color: #339999;
+    text-align: center;
+}
+
+h3 {
+    color: #33FFFF;
+    text-align: left;
+ }
+
+h2 {
+    color: #33FFFF;
+    text-align: left;
+ }
+
+ h4 {
+    color: #99FFFF;
+ }
+
+p {
+    font-family: "Times New Roman";
+    font-size: 50px;
+}

@@ -1,0 +1,30 @@
+<% if user_signed_in? %>
+	 
+	 <div style="position: absolute; top: 0px;left: 0px;"> <h4>Bienvenido <%= current_user.nombre%> </h4></div>
+
+	 <div style="position: absolute; top: 0px;left: 300px;"> <h4>Correo: <%= current_user.email%> </h4></div>
+
+ 	 <div style="position: absolute; top: 0px;left: 600px;"> <h4>Sangre: <%= current_user.sangre%> </h4></div>  
+
+	 <div style="position: absolute; top: -20px;left: 1200px;"><font size=4> <h3><%=link_to "Cerrar sesion", destroy_user_session_path, method: :delete, style: "color: #33FFFF"%></h3></font>
+	 </div>
+	 
+	 <div style="position: absolute; top: -20px;left: 1000px;"> <font size=4> <h3><%=link_to "Editar perfil", edit_user_registration_path, style: "color: #33FFFF"%></h3></font>
+	 </div>
+
+<%else%>
+	<div >
+		<h1><p> Proyecto 3  Ruby On Rails</p></h1>
+	</div>
+
+	<div >
+		<h1>DarkBayoRosaPuff</h1>
+	</div>
+
+	<div style="position: absolute; top: 200px;left: 270px;">
+		<%= image_tag "/images/smash" %>
+	</div>
+
+	<div style="position: absolute; top: -20px;left: 1000px;"> <font size=4> <h3> <%=link_to "Crea una cuenta", new_user_registration_path, style: "color: #33FFFF"%> </h3></font> </div>
+	<div style="position: absolute; top: -20px;left: 1200px;"> <font size=4> <h3> <%=link_to "Inicia Sesion", new_user_session_path, style: "color:#33FFFF" %> </h3></font> </div>
+<%end%>
