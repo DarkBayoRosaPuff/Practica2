@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class Donacione < ActiveRecord::Base
+  belongs_to :user
   validates :nombre, presence: true
   validates :telefono, presence: true, numericality: { only_integer: true }
   validates :correo, presence: true
