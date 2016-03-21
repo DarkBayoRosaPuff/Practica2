@@ -1,6 +1,19 @@
 <h1>Nueva petición</h1>
 <%= form_for :donacione, url: donaciones_path do |f| %>
-  <p>
+
+<% if @donacione.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@donacione.errors.count, "errores") %> evitaron que se pudiera crear la petición
+      </h2>
+      <ul>
+        <% @donacione.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<p>
     <%= f.label :nombre %><br>
     <%= f.text_field :nombre %>
   </p>
