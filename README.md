@@ -2,7 +2,7 @@
 
 Integrantes del equipo:
   Bernal Cedillo Enrique Antonio
-  Gracía Flores Jorge Luis
+  García Flores Jorge Luis
   Villa Chio Oscar Eduardo
   Zamora Gutierrez Victor
 
