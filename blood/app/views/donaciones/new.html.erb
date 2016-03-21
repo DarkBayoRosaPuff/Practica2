@@ -1,1 +1,47 @@
 <h1>Nueva petición</h1>
+<%= form_for :donacione do |f| %>
+  <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </p>
+ 
+  <p>
+    <%= f.label :teléfono %><br>
+    <%= f.text_field :telefono %>
+  </p>
+
+  <p>
+    <%= f.label :correo_electrónico %><br>
+    <%= f.email_field :correo %>
+  </p>
+
+  <p>
+    <%= f.label :nombre_del_hospital %><br>
+    <%= f.text_field :nombre_hospital %>
+  </p>
+
+  <p>
+    <%= f.label :dirección_del_hospital %><br>
+    <%= f.text_area :direccion_hospital %>
+  </p>
+
+   <p>
+     <%= f.label :teléfono_del_hospital %><br>
+    <%= f.text_field :tel_hospital %>
+   </p>
+    
+   <p>
+    <%= f.label :tipo_de_sangre %><br>
+    <%= f.text_field :sangre %>
+  </p>
+   
+<p>
+  <%= f.label :número_de_donadores %><br>
+  <%= f.number_field :donadores %>
+</p>
+
+ 
+<p>
+  <%= f.submit "Nueva petición" %>
+  </p>
+<% end %>
