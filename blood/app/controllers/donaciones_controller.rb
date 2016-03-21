@@ -8,13 +8,17 @@ class DonacionesController < ApplicationController
   end
 
   def new
+    @donacione = Donacione.new
   end
 
   def create
     @donacione = Donacione.new(donacione_params)
     
-    @donacione.save
-    redirect_to @donacione
+    if @donacione.save
+      redirect_to @donacione
+    else
+      render 'new'
+    end
   end
   
   private
