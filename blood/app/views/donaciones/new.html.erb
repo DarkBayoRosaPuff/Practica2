@@ -1,5 +1,5 @@
 <h1>Nueva petición</h1>
-<%= form_for :donacione do |f| %>
+<%= form_for :donacione, url: donaciones_path do |f| %>
   <p>
     <%= f.label :nombre %><br>
     <%= f.text_field :nombre %>
