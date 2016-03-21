@@ -1,4 +1,8 @@
 class DonacionesController < ApplicationController
+  def index
+    @donaciones = Donacione.all
+  end
+  
   def show
     @donacione = Donacione.find(params[:id])
   end
