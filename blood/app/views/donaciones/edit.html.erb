@@ -1,0 +1,65 @@
+<h1>Editar petición</h1>
+ 
+<%= form_for :donacione, url: donacione_path(@donacione), method: :patch do |f| %>
+ 
+  <% if @donacione.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@donacione.errors.count, "error") %> prohibited
+        this donacione from being saved:
+      </h2>
+      <ul>
+        <% @donacione.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </p>
+ 
+  <p>
+    <%= f.label :teléfono %><br>
+    <%= f.text_field :telefono %>
+  </p>
+
+  <p>
+    <%= f.label :correo_electrónico %><br>
+    <%= f.email_field :correo %>
+  </p>
+
+  <p>
+    <%= f.label :nombre_del_hospital %><br>
+    <%= f.text_field :nombre_hospital %>
+  </p>
+
+  <p>
+    <%= f.label :dirección_del_hospital %><br>
+    <%= f.text_area :direccion_hospital %>
+  </p>
+
+   <p>
+     <%= f.label :teléfono_del_hospital %><br>
+    <%= f.text_field :tel_hospital %>
+   </p>
+    
+   <p>
+    <%= f.label :tipo_de_sangre %><br>
+    <%= f.text_field :sangre %>
+  </p>
+   
+<p>
+  <%= f.label :número_de_donadores %><br>
+  <%= f.number_field :donadores %>
+</p>
+
+ 
+<p>
+  <%= f.submit "Editar" %>
+</p>
+<% end %>
+
+<%= link_to 'Volver', donaciones_path, style: "color:#33FFFF"%>
