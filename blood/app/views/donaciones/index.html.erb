@@ -1,0 +1,19 @@
+<h1>Lista de peticiones</h1>
+ 
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Tipo de sangre</th>
+    <th>Número de donadores</th>
+    <th>Hospital</th>
+  </tr>
+ 
+  <% @donaciones.each do |donacione| %>
+    <tr>
+      <td><%= donacione.nombre %></td>
+      <td><%= donacione.sangre %></td>
+      <td><%= donacione.donadores %></td>
+      <td><%= donacione.nombre_hospital %></td>
+    </tr>
+  <% end %>
+</table>
