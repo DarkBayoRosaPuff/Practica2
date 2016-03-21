@@ -1,5 +1,5 @@
+
 <h1>Lista de peticiones</h1>
-<%= link_to 'Nueva petición', new_donacione_path, style: "color:#33FFFF" %>
 <table>
   <tr>
     <th>Nombre</th>
@@ -9,11 +9,11 @@
   </tr>
  
   <% @donaciones.each do |donacione| %>
-    <tr>
-      <td><%= donacione.nombre%></td>
-      <td><%= donacione.sangre %></td>
-      <td><%= donacione.donadores %></td>
-      <td><%= donacione.nombre_hospital %></td>
-    </tr>
+  <tr>
+    <td><%= donacione.usuario.nombre %></td>
+    <td><%= donacione.usuario.sangre %></td>
+    <td><%= donacione.donadores %></td>
+    <td><%= donacione.nombre_hospital %></td>
+  </tr>
   <% end %>
 </table>
