@@ -10,7 +10,11 @@ class DonacionesController < ApplicationController
   def new
     @donacione = Donacione.new
   end
-
+  
+  def edit
+    @donacione = Donacione.find(params[:id])
+  end
+  
   def create
     @donacione = Donacione.new(donacione_params)
     
