@@ -4,9 +4,7 @@ class CreateDonaciones < ActiveRecord::Migration
       t.string :nombre_hospital
       t.text :direccion_hospital
       t.integer :tel_hospital
-      t.integer :donadores
-      t.references :user
-
+      t.integer :donadores      
       t.timestamps
     end
   end
