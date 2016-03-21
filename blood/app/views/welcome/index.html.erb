@@ -11,6 +11,8 @@
 	 
 	 <div style="position: absolute; top: -20px;left: 1000px;"> <font size=4> <h3><%=link_to "Editar perfil", edit_user_registration_path, style: "color: #33FFFF"%></h3></font>
 	 </div>
+	 
+	 <div style="position: absolute; top: -20px;left: 850px;"> <font size=4> <h3> <%=link_to "Peticiones", controller: 'donaciones', style: "color:#33FFFF" %> </h3></font> </div>
 
 <%else%>
 	<div >
@@ -27,4 +29,5 @@
 
 	<div style="position: absolute; top: -20px;left: 1000px;"> <font size=4> <h3> <%=link_to "Crea una cuenta", new_user_registration_path, style: "color: #33FFFF"%> </h3></font> </div>
 	<div style="position: absolute; top: -20px;left: 1200px;"> <font size=4> <h3> <%=link_to "Inicia Sesion", new_user_session_path, style: "color:#33FFFF" %> </h3></font> </div>
+	<div style="position: absolute; top: -20px;left: 850px;"> <font size=4> <h3> <%=link_to "Peticiones", controller: 'donaciones', style: "color:#33FFFF" %> </h3></font> </div>
 <%end%>
