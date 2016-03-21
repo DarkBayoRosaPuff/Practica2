@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  resources :donaciones
   get 'welcome/index'
 
   devise_for :users
- devise_scope :user do
+  devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   # The priority is based upon order of creation: first created -> highest priority.
