@@ -24,10 +24,17 @@ class DonacionesController < ApplicationController
       render 'new'
     end
   end
+
+  def destroy
+    @donacione = Donacione.find(params[:id])
+    @donacione.destroy
+    
+    redirect_to donaciones_path
+  end
   
   private
   def donacione_params
-    params.require(:donacione).permit(:nombre, :telefono, :correo, :nombre_hospital, :direccion_hospital, :tel_hospital, :sangre, :donadores)
+    params.require(:donacione).permit(:nombre_hospital, :direccion_hospital, :tel_hospital, :titulo, :descripcion)
   end
   
 end

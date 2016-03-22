@@ -5,10 +5,8 @@
   <% if @donacione.errors.any? %>
     <div id="error_explanation">
       <h2>
-        <%= pluralize(@donacione.errors.count, "error") %> prohibited
-        this donacione from being saved:
-      </h2>
-      <ul>
+	<%= pluralize(@donacione.errors.count, "errores") %> evitaron que se pudiera crear la peticiónh2>
+	<ul>
         <% @donacione.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
@@ -50,16 +48,10 @@
     <%= f.label :tipo_de_sangre %><br>
     <%= f.text_field :sangre %>
   </p>
-   
-<p>
-  <%= f.label :número_de_donadores %><br>
-  <%= f.number_field :donadores %>
-</p>
-
  
 <p>
   <%= f.submit "Editar" %>
 </p>
 <% end %>
 
-<%= link_to 'Volver', donaciones_path, style: "color:#33FFFF"%>
+<%= link_to 'Volver', donaciones_path, style: "color:#0000FF"%>

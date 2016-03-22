@@ -13,50 +13,38 @@
       </ul>
     </div>
   <% end %>
-<p>
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </p>
- 
-  <p>
-    <%= f.label :teléfono %><br>
-    <%= f.text_field :telefono %>
-  </p>
 
-  <p>
-    <%= f.label :correo_electrónico %><br>
-    <%= f.email_field :correo %>
-  </p>
+  <div style="position: absolute; top: -20px;left: 1000px;"> <font size=4> <h3> <%=link_to "Perfil", new_user_session_path, style: "color:#0000FF" %> </h3></font> </div>
 
-  <p>
-    <%= f.label :nombre_del_hospital %><br>
-    <%= f.text_field :nombre_hospital %>
-  </p>
 
-  <p>
-    <%= f.label :dirección_del_hospital %><br>
-    <%= f.text_area :direccion_hospital %>
-  </p>
+   <div style="position: absolute; top: -20px;left: 1200px;"><font size=4> <h3><%=link_to "Cerrar sesion", destroy_user_session_path, method: :delete, style: "color: #0000FF"%></h3></font></div>
 
-   <p>
-     <%= f.label :teléfono_del_hospital %><br>
-    <%= f.text_field :tel_hospital %>
-   </p>
-    
-   <p>
-    <%= f.label :tipo_de_sangre %><br>
-    <%= f.text_field :sangre %>
-  </p>
-   
-<p>
-  <%= f.label :número_de_donadores %><br>
-  <%= f.number_field :donadores %>
-</p>
+ <div class="field">
+    <h3><%= f.label :nombre,"Título"%></h3>
+        <%= f.text_field :titulo, autofocus: false, placeholder: "Título" %> 
+  </div>
 
- 
-<p>
+ <div class="field">
+    <h3><%= f.label :descripcion, "Descripción"%></h3>
+     <%= f.text_field :descripcion, autofocus: false, placeholder: "Descripción"%> 
+  </div>
+
+ <div class="field">
+    <h3><%= f.label :nombre_del_hospital,"Nombre del hospital"%></h3>
+    <%= f.text_field :nombre_hospital, autofocus: false, placeholder: "Nombre del hospital" %>
+  </div>
+
+ <div class="field">
+    <h3><%= f.label :dirección_del_hospital,"Direccion del hospital"%></h3>
+    <%= f.text_field :direccion_hospital, autofocus: false, placeholder: "Direccion del hospital" %>
+  </div>
+
+  <div class="field">
+    <h3><%= f.label :teléfono_del_hospital, "Telefono del hospital"%></h3>
+    <%= f.text_field :tel_hospital, autofocus: false, placeholder: "Telefono del hospital" %>
+  </div>
+ <br />
   <%= f.submit "Nueva petición" %>
-  </p>
 <% end %>
-
-<%= link_to 'Volver', donaciones_path, style: "color:#33FFFF"%>
+<br />
+<%= link_to 'Volver', donaciones_path, style: "color:#0000FF"%>

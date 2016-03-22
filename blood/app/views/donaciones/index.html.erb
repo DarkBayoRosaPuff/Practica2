@@ -1,19 +1,25 @@
 
 <h1>Lista de peticiones</h1>
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Tipo de sangre</th>
-    <th>Número de donadores</th>
-    <th>Hospital</th>
-  </tr>
+
+
+  <div style="position: absolute; top: -20px;left: 1000px;"> <font size=4> <h3> <%=link_to "Perfil", new_user_session_path, style: "color:#0000FF" %> </h3></font> </div>
+
+
+   <div style="position: absolute; top: -20px;left: 1200px;"><font size=4> <h3><%=link_to "Cerrar sesion", destroy_user_session_path, method: :delete, style: "color: #0000FF"%></h3></font></div>
+
  
+<table>
+<tr>
+  <td WIDTH=200><strong><h3>Nombre del hospital  </h3></strong></td>
+  <td WIDTH=200><strong><h3>Tipo de sangre</h3></strong></td>
+  <td WIDTH=200><strong><h3>Id Usuario</h3></strong></td>
+</tr>
   <% @donaciones.each do |donacione| %>
+
   <tr>
-    <td><%= donacione.usuario.nombre %></td>
-    <td><%= donacione.usuario.sangre %></td>
-    <td><%= donacione.donadores %></td>
-    <td><%= donacione.nombre_hospital %></td>
+   <td WIDTH=200><h3><%= donacione.nombre_hospital %></h3></td> 
+   <td WIDTH=200><h3><%= donacione.nombre_hospital %></h3></td> 
+   <td WIDTH=200><h3><%= donacione.usuario.nombre %></h3></td> 
   </tr>
-  <% end %>
 </table>
+  <% end %>

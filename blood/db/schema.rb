@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321155632) do
+ActiveRecord::Schema.define(version: 20160322054721) do
 
   create_table "donaciones", force: true do |t|
     t.string   "nombre_hospital"
     t.text     "direccion_hospital"
     t.integer  "tel_hospital"
-    t.integer  "donadores"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "titulo"
+    t.string   "descripcion"
   end
 
   add_index "donaciones", ["user_id"], name: "index_donaciones_on_user_id"
